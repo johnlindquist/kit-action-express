@@ -9,19 +9,6 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - name: Get Port
-        id: get-port
-        uses: johnlindquist/kit-action@main
-        with:
-          script: get-port
-          args: 3000
-
-      - name: Display URL
-        run: |
-          echo "${{ steps.get-port.outputs.result }}"
-
-        shell: bash
-
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
