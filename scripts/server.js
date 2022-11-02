@@ -1,4 +1,5 @@
 let express = await npm("express")
+let detectPort = await npm("detect-port")
 
 let app = express()
 let port = await detectPort(3000)
