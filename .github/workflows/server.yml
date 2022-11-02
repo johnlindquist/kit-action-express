@@ -1,11 +1,21 @@
 name: "kit-action-express"
 on:
+  push:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
   example:
     runs-on: ubuntu-latest
     steps:
+      - name: Display URL
+        run: |
+          dig +short myip.opendns.com @resolver1.opendns.com
+          curl -s http://whatismyip.akamai.com/
+
+        shell: bash
+
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
