@@ -1,3 +1,5 @@
+console.log("Hello World")
+
 let port = await arg("Enter port")
 
 console.log("Starting server on port " + port)
