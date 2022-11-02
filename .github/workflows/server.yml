@@ -9,6 +9,10 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
+      - name: Test ngrok
+        uses: johnlindquist/kit-action@main
+        with:
+          script: "log"
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
