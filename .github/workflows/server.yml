@@ -9,11 +9,12 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
-      - name: Test ngrok
+      - name: Tunnel
         uses: johnlindquist/kit-action@main
         with:
-          script: "core"
-      # - name: Start Server
-      #   uses: johnlindquist/kit-action@main
-      #   with:
-      #     script: "server"
+          script: tunnel
+
+      - name: Start Server
+        uses: johnlindquist/kit-action@main
+        with:
+          script: server
