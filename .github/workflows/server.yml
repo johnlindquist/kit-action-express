@@ -9,4 +9,4 @@ jobs:
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
-          script: "express"
+          script: "server"
