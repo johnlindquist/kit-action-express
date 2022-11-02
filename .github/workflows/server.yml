@@ -11,7 +11,9 @@ jobs:
     steps:
       - name: Get Port
         id: get-port
-        user: johnlindquist/kit-action@main
+        uses: johnlindquist/kit-action@main
+        with:
+          script: get-port
 
       - name: Display URL
         run: |
