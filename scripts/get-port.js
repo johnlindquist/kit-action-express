@@ -1,4 +1,3 @@
-let detectPort = await npm("detect-port")
-let port = await detectPort(80)
-
-console.log(port)
+let ngrok = await npm("ngrok")
+let url = await ngrok.connect(+(await arg("Enter port")))
+console.log(url)

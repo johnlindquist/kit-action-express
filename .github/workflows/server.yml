@@ -14,11 +14,11 @@ jobs:
         uses: johnlindquist/kit-action@main
         with:
           script: get-port
+          args: 3000
 
       - name: Display URL
         run: |
-          ip=$(curl -s http://whatismyip.akamai.com/)
-          echo "http://$ip:${{ steps.get-port.outputs.result }}"
+          echo "${{ steps.get-port.outputs.result }}"
 
         shell: bash
 
@@ -26,4 +26,4 @@ jobs:
         uses: johnlindquist/kit-action@main
         with:
           script: server
-          args: ${{ steps.get-port.outputs.result }}
+          args: 3000
