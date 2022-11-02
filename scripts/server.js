@@ -1,6 +1,10 @@
 let port = await arg("Enter port")
 
+console.log("Starting server on port " + port)
+
 let core = await npm("@actions/core")
+
+console.log("Core version: " + core.version)
 
 core.debug(`This is a debug message`)
 core.info(`This is an info message`)
