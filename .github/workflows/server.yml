@@ -13,4 +13,3 @@ jobs:
         uses: johnlindquist/kit-action@main
         with:
           script: "server"
-          args: "3000"
