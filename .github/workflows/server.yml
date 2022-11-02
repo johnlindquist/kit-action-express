@@ -13,8 +13,10 @@ jobs:
         uses: johnlindquist/kit-action@main
         with:
           script: tunnel
+          args: 3000
 
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
           script: server
+          args: 3000
