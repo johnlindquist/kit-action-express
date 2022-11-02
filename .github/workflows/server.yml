@@ -12,5 +12,5 @@ jobs:
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
-          script: server
+          script: "server"
           args: "3000"
