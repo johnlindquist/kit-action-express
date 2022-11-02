@@ -12,8 +12,8 @@ jobs:
       - name: Test ngrok
         uses: johnlindquist/kit-action@main
         with:
-          script: "log"
-      - name: Start Server
-        uses: johnlindquist/kit-action@main
-        with:
-          script: "server"
+          script: "core"
+      # - name: Start Server
+      #   uses: johnlindquist/kit-action@main
+      #   with:
+      #     script: "server"
