@@ -9,14 +9,19 @@ jobs:
   example:
     runs-on: ubuntu-latest
     steps:
+      - name: Get Port
+        id: get-port
+        user: johnlindquist/kit-action@main
+
       - name: Display URL
         run: |
-          dig +short myip.opendns.com @resolver1.opendns.com
-          curl -s http://whatismyip.akamai.com/
+          ip=$(curl -s http://whatismyip.akamai.com/)
+          echo "http://$ip:${{ steps.get-port.outputs.port }}"
 
         shell: bash
 
       - name: Start Server
         uses: johnlindquist/kit-action@main
         with:
-          script: "server"
+          script: server
+          args: ${{ steps.get-port.outputs.port }}
