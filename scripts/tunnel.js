@@ -1,4 +1,4 @@
 let port = +(await arg("Port:"))
-let ngrok = await npm("ngrok")
-let url = await ngrok.connect(+port)
-console.log(url)
+let localtunnel = await npm("localtunnel")
+let tunnel = await localtunnel({ port: 3000 })
+console.log(tunnel.url)
